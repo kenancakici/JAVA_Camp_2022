@@ -11,5 +11,11 @@ public class HibernateCategoryDao implements ICategoryDao{
 		
 	}
 
+	@Override
+	public void list() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 }

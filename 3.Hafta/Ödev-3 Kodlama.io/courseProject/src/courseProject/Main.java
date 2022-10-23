@@ -25,17 +25,37 @@ public class Main {
 		// Loglama işlemleri
 		List<Logger> loggers = new ArrayList<Logger>();
 		loggers.add(new FileLogger());
- 		loggers.add(new DatabaseLogger());
-		loggers.add(new MailLogger());
+// 		loggers.add(new DatabaseLogger());
+//		loggers.add(new MailLogger());
 		
 		// Kategori kayıt
 		System.out.println("\n--------------- KATEGORİ --------------------");
-		Category category = new Category();
-		category.setId(1);
-		category.setName("Python Programlama");
 		
-		CategoryManager categoryManager = new CategoryManager(new HibernateCategoryDao(),loggers);
-		categoryManager.add(category);
+		List<Category> categoryList = new ArrayList<>();
+		Category category1 = new Category();
+		category1.setId(1);
+		category1.setName("Programlama");
+		
+		Category category2 = new Category();
+		category2.setId(2);
+		category2.setName("Dil Eğitimi");	
+		
+		Category category3 = new Category();
+		category3.setId(3);
+		category3.setName("Tasarım");	
+		
+		Category category4 = new Category();
+		category4.setId(4);
+		category4.setName("Tasarım");	
+		
+		
+		CategoryManager categoryManager = new CategoryManager(new HibernateCategoryDao(),loggers,categoryList);
+		categoryManager.add(category1);
+		categoryManager.add(category2);
+		categoryManager.add(category3);
+		//categoryManager.add(category4);
+		
+		categoryManager.list();
 
 		System.out.println("\n----------------- EĞİTMEN ------------------");
 		
@@ -53,15 +73,35 @@ public class Main {
 		
 		// Kurs Kayıt
 
-		Course course = new Course();
-		course.setId(1);
-		course.setName("(2022) Yazılım Geliştirici Yetiştirme Kampı - JAVA");
-		course.setPrice(1000);
+		List<Course> courseList = new ArrayList<>();
+		Course course1 = new Course();
+		course1.setId(1);
+		course1.setName("Yazılım Geliştirici Yetiştirme Kampı - JAVA");
+		course1.setPrice(1000);
 		
+		Course course2 = new Course();
+		course2.setId(2);
+		course2.setName("Yazılım Geliştirici Yetiştirme Kampı - C#");
+		course2.setPrice(1000);
+		
+		Course course3 = new Course();
+		course3.setId(3);
+		course3.setName("Yazılım Geliştirici Yetiştirme Kampı - REACT");
+		course3.setPrice(1000);
 
-		CourseManager courseManager = new CourseManager(new JdbcCourseDao(), loggers);
-		courseManager.add(course);
-			
+		Course course4 = new Course();
+		course4.setId(4);
+		course4.setName("Yazılım Geliştirici Yetiştirme Kampı - C#");
+		course4.setPrice(1000);
+		
+		CourseManager courseManager = new CourseManager(new JdbcCourseDao(), loggers,courseList);
+		courseManager.add(course1);
+		courseManager.add(course2);
+		courseManager.add(course3);
+		//courseManager.add(course4);
+		
+		//course.list();
+
 		System.out.println("-----------------------------------");
 
 

@@ -2,8 +2,8 @@ package courseProject.entities;
 
 public class BaseEntity {
 	
-	private int id;
-	private String name;
+	 int id;
+	 String name;
 	
 	public BaseEntity() {
 		
