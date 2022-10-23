@@ -2,7 +2,7 @@ package oop1;
 //inheritance (Kalıtım) : 
 
 // IndividualCustomer bir müşteridir.
-//Cusomer Sınıfından ortak özellikleri extend ile alıyoruz.
+//Customer Sınıfından ortak özellikleri extend ile alıyoruz.
 //Yani kalıtım inheritance) yoluyla alıyoruz.
 
 public class IndividualCustomer extends Customer {
