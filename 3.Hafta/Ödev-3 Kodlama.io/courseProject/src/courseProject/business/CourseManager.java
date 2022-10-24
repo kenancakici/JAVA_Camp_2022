@@ -40,6 +40,6 @@ public class CourseManager {
 	}
 	
 	public void list() {
-		iCourseDao.list();
+		iCourseDao.list(courses);
 	}
 }

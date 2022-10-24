@@ -100,7 +100,7 @@ public class Main {
 		courseManager.add(course3);
 		//courseManager.add(course4);
 		
-		//course.list();
+		courseManager.list();
 
 		System.out.println("-----------------------------------");
 

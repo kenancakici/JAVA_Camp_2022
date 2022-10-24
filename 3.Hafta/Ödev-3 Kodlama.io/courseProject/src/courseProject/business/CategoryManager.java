@@ -36,7 +36,9 @@ public class CategoryManager {
 		}
 	}
 	
+	
 	public void list() {
+		System.out.println("\n----------- Kayıtlı Kategoriler ---------");
 		for (Category cat : categories) {
 			System.out.println(cat.getName());
 		}

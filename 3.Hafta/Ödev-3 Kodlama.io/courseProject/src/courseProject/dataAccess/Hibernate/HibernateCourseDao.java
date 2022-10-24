@@ -1,5 +1,7 @@
 package courseProject.dataAccess.Hibernate;
 
+import java.util.List;
+
 import courseProject.dataAccess.Interfaces.ICourseDao;
 import courseProject.entities.Course;
 
@@ -12,9 +14,11 @@ public class HibernateCourseDao implements ICourseDao{
 	}
 
 	@Override
-	public void list() {
-		// TODO Auto-generated method stub
-		
+	public void list(List<Course>courses) {
+		System.out.println("---------- Kayıtlı Kurslar --------------");
+		for (Course course : courses) {
+			System.out.println(course.getName());
+		}
 	}
 
 
