@@ -22,15 +22,11 @@ public class CourseManager {
 	public void add(Course course) throws Exception {
 		
 		for (Course c : courses) {
-			if(c.getName().equals(course.getName())) {
-				throw new Exception("Bu kurs zaten kayıtlıdır! [" + course.getName() + "]");
+			if(course.getName().equals(c.getName()) || course.getPrice() < 0  ) {
+				throw new Exception("Kurs adı veya kurs ücreti geçersiz! [" + course.getName() + "]");
 			}
 		}
-		
-		if(course.getPrice()<=0) {
-			throw new Exception ("Kurs fiyatı 0 dan küçük olamaz!");
-		}
-		
+				
 		iCourseDao.add(course);
 		courses.add(course);
 		

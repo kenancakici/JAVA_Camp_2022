@@ -60,14 +60,18 @@ public class Main {
 		System.out.println("\n----------------- EĞİTMEN ------------------");
 		
 		//Eğitmen Kayıt
-		Teacher teacher = new Teacher();
-		teacher.setId(1);
-		teacher.setName("Engin DEMİROĞ");
+		Teacher teacher1 = new Teacher();
+		teacher1.setId(1);
+		teacher1.setName("Engin DEMİROĞ");
 		
-
+		Teacher teacher2 = new Teacher();
+		teacher2.setId(2);
+		teacher2.setName("Kenan ÇAKICI");
+		
 			
 		TeacherManager teacherManager = new TeacherManager(new HibernateTeacherDao(), loggers );
-		teacherManager.add(teacher);
+		teacherManager.add(teacher1);
+		teacherManager.add(teacher2);
 
 		System.out.println("\n-------------- KURS -------------------");
 		
@@ -82,7 +86,7 @@ public class Main {
 		Course course2 = new Course();
 		course2.setId(2);
 		course2.setName("Yazılım Geliştirici Yetiştirme Kampı - C#");
-		course2.setPrice(1000);
+		course2.setPrice(0);
 		
 		Course course3 = new Course();
 		course3.setId(3);
@@ -92,7 +96,7 @@ public class Main {
 		Course course4 = new Course();
 		course4.setId(4);
 		course4.setName("Yazılım Geliştirici Yetiştirme Kampı - C#");
-		course4.setPrice(1000);
+		course4.setPrice(50);
 		
 		CourseManager courseManager = new CourseManager(new JdbcCourseDao(), loggers,courseList);
 		courseManager.add(course1);

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\Java_Dersleri\SpringProjects\spring-boot-rest-api-demo"/>
+			<item value="D:\JAVA_ 2022\JAVA_Camp_2022"/>
+			<item value="D:\JAVA_ 2022\JAVA_Camp_2022\4. CampSpring\rentACar"/>
+			<item value="D:\JAVA_ 2022\JAVA_Camp_2022\4. CampSpring"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>
